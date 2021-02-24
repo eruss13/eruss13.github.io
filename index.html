@@ -1,9 +1,112 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1 style="color:blue;">Axolotl</h1>
 
-<p style="color:blue;">The axolotl or "Mexican salamander" (who looks like a Pokémon , if you ask me) is often spotted in lakes in various places around Mexico. These little salamanders are amphibious although often spend their adult lives strictly in the water. However, the population of these cute creatures is dwindling due to non-native predators and the continued urbanization of Mexico. The axolotl eats small worms, insects, and fish in order to survive..</p>
-<img src="https://d2r55xnwy6nx47.cloudfront.net/uploads/2018/07/Axolotl_IMP_2880x1220_HP.jpg" width="400" height="200" alt="Axolotl swimming" >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Additional recommended scripts from w3schools.com -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Added for js scripts to toggle buttons -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron" style="background-image: url(./images/background-tech-07.jpg) " alt="background-image tech;" >
+        <!-- Build the navbar and format with dark and responsive small icon -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <!-- style my name with link to LinkedIn + LinkedIn icon + Github icon -->
+            <a id="title-name" class="navbar-brand" href="https://www.linkedin.com/in/ethanrussell" target="_blank">Ethan Russell <i class="fa fa-linkedin-square" style="font-size:20px;color:white"></i></a>
+            <a id="title-name" class="navbar-brand" href="https://github.com/eruss13" target="_blank"><i class="fa fa-github-square" style="font-size:20px;color:white"></i></a>
+            <!-- Adding a hamburger icon when collapsed in small screen -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Create collapsable buttons -->
+            <div class="navbar-collapse collapse ml-auto" id="collapsibleNavbar">
+                <!-- right-align the navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <li id="about" class="nav-item ml-auto button">
+                        <!-- <button>About</button> -->
+                      <a class="nav-link" href="#" onclick="changeCSS('css/style.css');">About</a>
+                    </li>
+                    <li id="contact" class="nav-item ml-auto">
+                      <a class="nav-link" href="#" onclick="changeCSS('css/contact.css');">Contact</a>
+                    </li>
+                    <li id="portfolio" class="nav-item ml-auto">
+                      <a class="nav-link" href="./portfolio.html" onclick="changeCSS('css/portfolio.css');">Portfolio</a>
+                    </li>    
+                  </ul>
+              </div>  
+        </nav>
+    
+        <!-- Container for the content -->
+        <main>
+            <div class="border-top container" id="aboutPage">
+                <span><h3>About Me</h3><a href="https://drive.google.com" target="_blank">Resume</a></span>
+                <hr>
+                <!-- Added custom margin into the style.css and invoked using class="about-img" -->
+                <img id="about-img" src="images/me.jpg" alt="Portfolio Picture" class="float-left about-img" height="150px" width="150px">
+                <p>I was born in Long Island, New York, and decided several years ago to move down to Richmond, Virginia where I also have more family.  I grew up playing lots of sports including basketball, baseball, soccer, track, and cross countrty.</p>
+                <p>I am a student at VCU majoring in Physics but have taken a short break this yeat to begin my journey with web development with the University of Richmond's trilogy coding bootcamp.</p>
+                <p>My passion for technology first came from following news in consumer technology and the tech industry.  I have now become more interested in getting on the developmental side rather than just be a consumer of technology.</p>
+                <p>With the knowledge that I gain from this course I hope to find a company to work with where I will be able to use my creative skills alongside my developing skills to put forth strong projects.<p>
+            </div>
+        
+            <div class="contact-page" id="contactPage">
+                <form class="border-top container article-content">
+                    <h3>Contact</h3>
+                    <hr>
+                    <section class="row">
+                        <header class="col-xs">
+                            <label for="name">Full Name:</label>
+                        </header>
+                        <span class="col-lg">
+                            <input type="text" id="name" name="name">
+                        </span>
+                    </section>
+                    <section class="row">
+                        <header class="col-xs">
+                            <label for="email">Email:</label>
+                        </header>
+                        <span class="col-lg">
+                            <input type="text" id="email" name="email">
+                        </span>
+                    </section>
+                    <section class="row">
+                        <header class="col-xs">
+                            <label for="subject">Comment:</label>
+                        </header>
+                        <span class="col-lg">
+                            <textarea id="comment" name="comment" style="height:100px"></textarea>
+                        </span>
+                    </section>
+                    <section class="row">
+                        <input type="submit" value="Submit">
+                    </section>
+                </form>    
+            </div>
+            <div class="portfolio-page" id="portfolioPage">
+                <article class="border-top container article-content">
+                    <h3>Portfolio</h3>
+                    <hr>
+                    
+         
+                    </section>
+                </article>
+            </div>
+        </main>
+        <footer class="footer">
+            <section class="container">
+                <span class="text-muted"><code>&copy;</code> Ethan Russell</span>
+            </section>
+        </footer>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
